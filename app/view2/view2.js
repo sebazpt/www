@@ -10,5 +10,13 @@ angular.module('myApp.view2', ['ngRoute'])
 }])
 
 .controller('View2Ctrl', [function() {
+  console.log('Sección Problemas');
+  alert('Sección Problemas');
+  
+
+// JSZG:DESARROLLO, TEST Y PRUEBAS TECNICAS INICIO
+
+// JSZG:DESARROLLO, TEST Y PRUEBAS TECNICAS FIN
 
 }]);
+

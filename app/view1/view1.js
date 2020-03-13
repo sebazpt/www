@@ -10,5 +10,11 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', [function() {
+  console.log('Prueba Desarrollo 2020');
 
 }]);
+
+console.log('Prueba Desarrollo 2020');
+
+const cantidadPreguntas = '9';  
+console.log('Cantidad de Preguntas', cantidadPreguntas);
