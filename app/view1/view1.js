@@ -1,4 +1,6 @@
 'use strict';
+console.log('Inicio Prueba Desarrollo 2020');
+
 
 angular.module('myApp.view1', ['ngRoute'])
 
@@ -10,11 +12,9 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', [function() {
-  console.log('Prueba Desarrollo 2020');
+  console.log('Sección Desarrollo');
+  const cantidadPreguntas = '9';  
+  console.log('Cantidad de Preguntas', cantidadPreguntas);
 
 }]);
 
-console.log('Prueba Desarrollo 2020');
-
-const cantidadPreguntas = '9';  
-console.log('Cantidad de Preguntas', cantidadPreguntas);
