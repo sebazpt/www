@@ -7,9 +7,13 @@ angular.module('myApp', [
   'myApp.view2',
   //'myApp.empresa',
   'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+])
+.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
+
+console.log('Inicio de app');
+console.log('Prueba Desarrollo 2020');
+console.clear();

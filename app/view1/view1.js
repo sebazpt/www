@@ -1,6 +1,4 @@
 'use strict';
-console.log('Inicio Prueba Desarrollo 2020');
-
 
 angular.module('myApp.view1', ['ngRoute'])
 
@@ -11,10 +9,19 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
-  console.log('Sección Desarrollo');
-  const cantidadPreguntas = '9';  
-  console.log('Cantidad de Preguntas', cantidadPreguntas);
+.controller("View1Ctrl", function($scope) {
+  console.log('Controlador Sección Desarrollo');
+  
+  //$scope.name = "";
+  $scope.cantidadAccesos = '001';
+  $scope.mostrarNombre = function(){
+    if($scope.nombre!==undefined){
+      alert('Bienvenido! ' + $scope.nombre);
+      console.log('Nombre: ', $scope.nombre)
+    }else{
+      alert('Debes ingresar algún nombre');
+    }
+  }
 
-}]);
+});
 

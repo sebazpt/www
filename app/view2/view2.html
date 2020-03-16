@@ -5,6 +5,56 @@
 </p>
  -->
  <div class="container">
-  <h1>Sección Problemas</h1>
-  <p>Resultados {{cantidadClientes}}</p>
+
+  <section class="jumbotron">
+    <h1>Sección Problemas</h1>
+
+    <div class="row">
+
+      <div class="col-12 panel panel-primary">
+        <div class="panel-body">
+          <p>
+            <h5> {{pregunta0}} 
+              <button  name="bp0" id="bp0"  class="btn btn-outline-success" ng-click="mostrarRespuesta0()">
+                VER
+              </button>
+            </h5>
+          </p>
+          <ul class="col-6 list-group">
+            <li class="list-group-item" ng-repeat="client in clients"> {{client.id}} </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 panel panel-default">
+        <div class="panel-body">
+          <p>
+            <h5> {{pregunta1}} 
+              <button name="bp1" id="bp1" class="btn btn-outline-success" ng-click="mostrarRespuesta1()">
+                VER
+              </button>
+            </h5>
+          </p>
+          <table class="col-8 table" >
+            <thead ng-show="mostrarCabeceras">
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>RUT</th>
+            </thead>
+            <tr ng-repeat="client in clients | orderBy:'+taxNumber'">
+              <td> {{client.id}} </td>
+              <td> {{client.name}} </td>
+              <td> {{client.taxNumber}} </td>
+            </tr>
+          </table>
+  <!--         <ul>
+            <li ng-repeat="client in clients | orderBy:'+taxNumber'"> {{client.id + ' | ' + client.name + ' | ' + client.taxNumber}} </li>
+          </ul> -->
+        </div>
+      </div>
+  
+     </div>
+  </section>
+
+  
 </div>

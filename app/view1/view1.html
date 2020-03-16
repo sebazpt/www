@@ -1,5 +1,23 @@
 <!-- <p>This is the partial for view 1.</p> -->
 <div class="container">
-    <h1>Prueba de Desarrollo {{cantidadPreguntas}}</h1>
-    
+  <section class="jumbotron">
+    <span>Hola<span ng-bind="nombre" class="ml-1"></span>!</span>
+    <h1 >Sección Desarrollo <span> {{cantidadAccesos}} </span></h1>
+        
+    <article>
+      <form name=formulario>
+        <div class="input-group">
+  
+        <label>Nombre: </label>
+        <input class="form-control" type="text" ng-model="nombre" maxlength="20" placeholder="15 caracteres máximo"/>
+        <!-- {{ nombre }} -->
+        <input class="buttonbtn btn-primary" type="button" value="Guardar Nombre" ng-click="mostrarNombre()"/>
+  
+        </div>
+        
+      </form>
+    </article>
+  </section>
+      
+         
 </div>
