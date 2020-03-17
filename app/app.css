@@ -44,7 +44,12 @@ article{
 }
 
 .panel-body{
-  margin: 0;
-  padding: 3% 1% 5% 1%;
+  margin: 3% 0 0 0;
+  padding: 1% 1% 5% 1%;
   border-top: 1px solid #999999;
+}
+
+.row.panel-body{
+  margin: 0 0 0 0;
+  padding: 3% 0% 0% 0%;
 }

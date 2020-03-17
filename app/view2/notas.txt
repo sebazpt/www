@@ -1,0 +1,30 @@
+      <div class="col-12 panel panel-primary">
+        <div class="panel-body">
+          <p>
+            <h5> {{pregunta1}} 
+              <button name="bp1" id="bp1" class="btn btn-outline-success" ng-click="mostrarRespuesta1()">
+                VER
+              </button>
+            </h5>
+          </p>
+          <table class="col-8 table" >
+            <thead ng-show="mostrarCabeceras">
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>RUT</th>
+            </thead>
+            <tr ng-repeat="client in clients | orderBy:'+taxNumber'">
+              <td> {{client.id}} </td>
+              <td> {{client.name}} </td>
+              <td> {{client.taxNumber}} </td>
+            </tr>
+          </table>
+  <!--         <ul>
+            <li ng-repeat="client in clients | orderBy:'+taxNumber'"> {{client.id + ' | ' + client.name + ' | ' + client.taxNumber}} </li>
+          </ul> -->
+        </div>
+      </div>
+
+      ///////////////////////////////////////////////
+      ///////////////////////////////////////////////
+  

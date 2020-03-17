@@ -16,4 +16,3 @@ angular.module('myApp', [
 
 console.log('Inicio de app');
 console.log('Prueba Desarrollo 2020');
-console.clear();

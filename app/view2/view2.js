@@ -42,6 +42,11 @@ angular.module('myApp.view2', ['ngRoute'])
     id: 6,
     taxNumber: '99804238',
     name: 'MOHAMED FERRE SAMPER'
+  },
+  {
+    id: 7,
+    taxNumber: '399804238',
+    name: 'MOHAMED FERRE SAMPER'
   }
   ];
   const accounts = [{
@@ -175,7 +180,8 @@ angular.module('myApp.view2', ['ngRoute'])
   ];
   
 
-  console.log('Sección Problemas');
+  console.clear();
+  console.log('Controlador Sección Problemas');
   alert('Bienvenido a Sección Problemas');
   
 
@@ -201,12 +207,14 @@ SECCIÓN PROBLEMAS
 // Luego devolver el lugar que ocupa este cliente en el ranking de la pregunta 2.
 
 // Impresión de soluciones. No modificar.
-console.log('Pregunta 0');
-$scope.pregunta0 = 'Arreglo con los ids de clientes';
-console.log($scope.pregunta0);
-
+/* $scope.pregunta0 = 'Arreglo con los ids de clientes';
 function listClientsIds(){
+  console.clear();
+  console.log('Pregunta 0');
+  console.log($scope.pregunta0);
   $scope.clients = clients;
+  $scope.mostrarCabeceras= true;
+
 
   const arregloClientsIds = $scope.clients.forEach(
     function (elemento, indice, array){
@@ -219,34 +227,47 @@ function listClientsIds(){
 $scope.mostrarRespuesta0 = function(){
   listClientsIds();
 }
-
-
-console.log('Pregunta 1');
+ */
 $scope.pregunta1 = 'Arreglo con los ids de clientes ordenados por rut';
-console.log($scope.pregunta1);
-
 function listClientsIdsSortByTaxNumber(){
-  $scope.clients = clients;
 
-  const arregloClientsIdsSortByTaxNumber = $scope.clients.forEach(
+  console.clear();
+  console.log('Pregunta 1');
+  console.log($scope.pregunta1);
+  $scope.clients = clients;
+  $scope.mostrarCabeceras= true;
+
+  const arregloClientsIdsSortByTaxNumber =  $scope.clients.sort(function (a, b) {
+    
+    return (String(a.name) - (b.name))
+})
+
+  console.log(arregloClientsIdsSortByTaxNumber);
+
+  /* const arregloClientsIdsSortByTaxNumber = $scope.clients.forEach(
     function (elemento, indice, array){
       console.log(elemento.id, elemento.name, elemento.taxNumber);
      }
-  );
+  ); */
   return arregloClientsIdsSortByTaxNumber;
 };
 
 $scope.mostrarRespuesta1 = function(){
+ 
   listClientsIdsSortByTaxNumber();
 }
 
 
-console.log('Pregunta 2');
+/* 
 function sortClientsTotalBalances(){
-  let respuesta = 'Arreglo con los nombres de cliente ordenados de mayor a menor por la suma TOTAL de los saldos de cada cliente en los bancos que participa.';
-  return respuesta;
+  console.clear();
+  console.log('Pregunta 2');
+  let respuesta2 = 'Arreglo con los nombres de cliente ordenados de mayor a menor por la suma TOTAL de los saldos de cada cliente en los bancos que participa.';
+
+  console.log($scope.pregunta2);
 };
 console.log(sortClientsTotalBalances());
+ */
 
 /* 
 console.log('Pregunta 3');
